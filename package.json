@@ -1,0 +1,19 @@
+{
+  "name": "0xnode",
+  "version": "1.0.0",
+  "description": "practice node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "sudarshan.eth",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.3.2",
+    "express": "^4.18.2",
+    "graphql": "^16.6.0",
+    "graphql-tag": "^2.12.6",
+    "nodemon": "^2.0.20"
+  }
+}
