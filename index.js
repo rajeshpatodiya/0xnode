@@ -12,6 +12,8 @@ const {ApolloServer}  =require('@apollo/server')
 const {startStandaloneServer}= require('@apollo/server/standalone')
 const {typeDefs} = require('./schema/typeDef')
 const{resolvers} = require('./schema/resolvers')
+const {validate}  = require("jsonschema")
+
 const fs  = require('fs');
     // const app = express();
     const server = new ApolloServer({typeDefs,resolvers})
@@ -20,6 +22,12 @@ const fs  = require('fs');
       });
       
       console.log(`🚀  Server ready at: ${url}`);
+      // Address, to be embedded on Person
+      console.log(validate(5.6, {"type": "boolean"}));
+
+
+
+    
       
       
     // const a = closure.clousres()
