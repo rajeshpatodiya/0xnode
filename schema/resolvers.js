@@ -1,3 +1,4 @@
+//resolver
 const {UserList,MovieList} = require('../dbData')
 const _ = require('lodash')
 const resolvers = {
