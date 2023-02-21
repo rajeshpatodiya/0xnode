@@ -5,5 +5,3 @@ jobs:
   steps:
     -name: trigger-when-pr-raised
     -run: echo "event triggered "
-
-
