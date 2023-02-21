@@ -20,8 +20,13 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Runs a single command using the runners shell
-      - name: Run a one-line script
+      - name: copy events in a test file
         run: |
           echo "Hello, world!" > eventDetail.txt
           echo "${{github.event.pull_request.html_url}}" > eventDetail.txt
           echo "${{github.event.pull_request.user.login}}" > eventDetail.txt
+      - name: Upload event in a artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: atifact for storing data
+          path: path/to/artifact/world.txt
