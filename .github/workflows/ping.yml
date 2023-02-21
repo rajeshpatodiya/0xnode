@@ -1,8 +1,8 @@
-name: trigger-pr-with-label
+name: trigger
 on: pull_request
 jobs:
   buidl:
     runs-on: ubuntu-latest
     steps:
       - name: trigger-when-pr-raised
-      - run: echo "event triggered "
+      - run: echo "event triggered"
