@@ -25,5 +25,5 @@ jobs:
       - name: issues with label agenda
         if: github.event_name == 'issues'
         run: |
-          echo [${{github.event.sender.login}}],[${{github.event.issue.html_url}}]
+          echo [${{github.event.issue.html_url}}],[${{github.event.sender.login}}]
 
