@@ -20,9 +20,14 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Runs a single command using the runners shell
-      - name: copy events in a test file
+      - name: pull request with label agenda
+        if: github.event_name == 'pull_request'
         run: |
-          echo "printing the event and author name who raised the event........"
+          echo ${{github.event.pull_request.html_url}}
+          echo ${{github.event.sender.login}}
+      - name: issues with label agenda
+        if: github.event_name == 'pull_request'
+        run: |
           echo ${{github.event.sender.login}}
           echo ${{github.event.issue.html_url}}
 
