@@ -26,5 +26,5 @@ jobs:
       - name: copy events in a test file
         run: |
           echo "printing the event and author name who raised the event........"
-          echo ${{github.event.sender.login}}
-          echo ${{github.event.sender.html_url}}
+          echo ${{github.event.sender}}
+
