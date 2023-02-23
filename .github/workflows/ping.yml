@@ -27,4 +27,4 @@ jobs:
         run: |
           echo "printing the event and author name who raised the event........"
           echo ${{github.event.sender.login}}
-          echo ${{github.event.html_url}}
+          echo ${{github.event.sender.html_url}}
