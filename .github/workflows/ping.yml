@@ -20,16 +20,16 @@ jobs:
       - name: pull request with label agenda
         if: github.event_name == 'pull_request'
         run: |
-          echo [${{github.event.pull_request.html_url}}],[${{github.event.sender.login}}] > file.txt
+          echo [${{github.event.pull_request.html_url}}],[${{github.event.sender.login}}] >> authors.txt
       #This step runs when the event is issues labeled agenda
       - name: issues with label agenda
         if: github.event_name == 'issues'
         run: |
-          echo [${{github.event.issue.html_url}}],[${{github.event.sender.login}}] > file.txt
+          echo [${{github.event.issue.html_url}}],[${{github.event.sender.login}}] >> authors.txt
       #This step runs to upload the artifact containing the author and pull request 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: file
-          path: file.txt
+          name: list of authors and their issues and pull request
+          path: authors.txt
 
