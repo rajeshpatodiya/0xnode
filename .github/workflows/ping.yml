@@ -38,4 +38,3 @@ jobs:
         with:
           name: list of authors and their issues and pull request
           path: authors.txt
-
