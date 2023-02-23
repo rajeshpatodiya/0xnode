@@ -2,7 +2,8 @@
 
 name: Event Trigger Workflow
 on:
-  # Triggers when pull request / issues get raised in a specific repository 
+  # Triggers when pull request / issues get raised in a specific repository
+  workflow_dispatch:
   pull_request:
     branches: [ "main" ]
     types: [labeled]
