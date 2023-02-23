@@ -19,8 +19,9 @@ jobs:
       # This step runs when the event is pull_request labeled agenda
       - name: pull request with label agenda
         if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v3
         run: |
-          echo [${{github.event.pull_request.html_url}}],[${{github.event.sender.login}}]
+          echo [${{github.event.pull_request.html_url}}],[${{github.event.sender.login}}] > test.txt
       # This step runs when the event is issues labeled agenda
       - name: issues with label agenda
         if: github.event_name == 'issues'
