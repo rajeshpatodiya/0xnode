@@ -9,9 +9,6 @@ on:
     types: [labeled]
   issues:
     types: [labeled]
-  issue_comment:
-    types: [labeled]
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -26,5 +23,6 @@ jobs:
       - name: copy events in a test file
         run: |
           echo "printing the event and author name who raised the event........"
-          echo ${{github.event.html_url}}
+          echo ${{github.event.sender.login}}
+          echo ${{github.event.issue.html_url}}
 
