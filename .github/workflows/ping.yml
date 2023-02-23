@@ -5,7 +5,9 @@ on:
   # Triggers when pull request / issues get raised in a specific repository 
   pull_request:
     branches: [ "main" ]
+    types: [labeled]
   issues:
+    types: [labeled]
 jobs:
   # This workflow contains a single job called "build"
   build:
