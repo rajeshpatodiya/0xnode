@@ -11,7 +11,7 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
-    # If the triggers are labelled as agenda then we build this job
+    # If the triggers are labelled as agenda then we proceed to build this job
     if: github.event.label.name == 'agenda'
     runs-on: ubuntu-latest
     steps:
