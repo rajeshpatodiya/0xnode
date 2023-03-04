@@ -1,0 +1,2 @@
+Debouncing , call , bind , apply , throttling , currying ,closures, infinite currying , event bubbling and event delegation, local storage , session storage, prototype , prototype inheritance , generators, cookies,
+Promises, async await , event loop, memoisation, this keyword, callbacks , hoisting
