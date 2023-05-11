@@ -1,2 +1,17 @@
-Debouncing , call , bind , apply , throttling , currying ,closures, infinite currying , event bubbling and event delegation, local storage , session storage, prototype , prototype inheritance , generators, cookies,
-Promises, async await , event loop, memoisation, this keyword, callbacks , hoisting
+Debouncing , call , bind , apply , throttling , currying ,closures, CORS
+infinite currying , event bubbling , event delegation, local storage , session storage, 
+prototype , prototype inheritance , 
+generators, cookies,
+Promises, async await , event loop, memoisation, this keyword, callbacks , hoisting, 
+polyfill for bind method , async , defer
+shallow and deep copy
+
+//doneTopics
+1.call ,apply, bind polyfill for bind
+2. Debouncing and Throttling
+3.currying, eventBubbling and event Capturing 
+In summary, event capturing is a way of handling events that starts with the topmost element and then propagates 
+down to the target element. It's the opposite of 
+event bubbling, which starts with the target element and then bubbles up to the top of the DOM tree
+4.prototype - whenever u create any object js engine puts this hidden property into an object and attaches 
+this to our original object to beable to get access to hidden properties and method using teh dot operator

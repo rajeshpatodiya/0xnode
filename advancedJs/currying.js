@@ -16,3 +16,5 @@ const information = (obj)=>{
     }
 }
 module.exports = {add,adds,information}
+//just makes it more readable and expressive It can also make your code more modular, 
+//by allowing you to reuse common patterns of function composition

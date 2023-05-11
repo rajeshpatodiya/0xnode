@@ -1,7 +1,7 @@
 const person = {
     name :"sudarshan",
     sayMyName : function (){
-        console.log(`dude sup${this}` )
+        console.log(`dude sup${this.name}` )
     }
 }
 const video   = (title)=>{

@@ -5,3 +5,5 @@ function Person(firstName, lastName) {
 }
 
 module.exports = { Person }
+
+//it attaches objects to those properties and methods and u will be able to get access to to those properties and methods 

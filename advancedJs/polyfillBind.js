@@ -30,3 +30,28 @@ Function.prototype.mybind = function(...args){
 }
 let a  = obj1.print.mybind(obj2,"manor",89)
 a("dsad")
+obj1 = {
+    dude:"a",
+    active:function(name,prefix){
+        console.log(`${name}${prefix}  is active`)
+    }
+}
+obj2 = {
+    name:"ser",
+    age:78
+}
+// let a = obj1.active.bind(obj2,"sudarshan",".eth")
+// console.log(a)
+// a()
+Function.prototype.mycustombind = function(...args){
+    params = args.slice(1)
+    object = this
+    return function(){
+        object.apply(args[0],params)
+        
+        
+    }
+    
+}
+let a =obj1.active.mycustombind(obj2,"sudarshan",".eth")
+a()
