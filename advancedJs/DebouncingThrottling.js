@@ -37,4 +37,4 @@ function throttling(func,delay){
 }
 //dobounce ---> differnece between one key press event and the other key press event is greater than a specified time then 
 // we do a fucntion call
-//throttling ---> if the differnece between to function call is greater than a specified time then we do  api call
+//throttling ---> if the differnece between two function call is greater than a specified time then we do  api call

@@ -1,44 +1,22 @@
-const FullName  =  (firstName,lastName)=>{
-    this.firstName = firstName
-    this.lastName = lastName
-    console.log(`name is ${this.firstName} ${this.lastName}`)
-}
+//call apply , bind
 //function borrowing
-let obj1 = {
+obj1 = {
     name:"sudarshan",
-    age:24,
-    print:function(){
-        console.log(this.name,this.age)
-    }
-}
-let obj2 = {
-    name:"nayan",
     age:28,
-    height:164
+    isDegen:true,
+    print:function (dumb,rem){
+        console.log(`${this.name}, of ${this.age} is a degen ${dumb},${rem} `)
+    }
     
 }
-//function borrowing
-obj1.print()
-obj1.print.call(obj2)
-let obj3 = {
-    name:"sudarshan",
-    age:24,
-    print:function(house,street){
-        console.log(this.name,this.age,house,street)
-    }
+obj2 ={
+    name:"jzzzz",
+    age:89
 }
-let obj4 = {
-    name:"nayan",
-    age:28,
-    height:164
-    
-}
-//function borrowing
-obj3.print("ceebros",5)
-obj3.print.apply(obj4,["manor",89])
-//in apply u pass i an array
-//in bind u can return it in an array and invoke it later
-let a  = obj3.print.bind(obj4,"manor",89)
+obj1.print.call(obj2,45,45) //call
+obj1.print.apply(obj2,[100,100]) //apply -->pass in an array
+let a  = obj1.print.bind(obj2,"bind","bind")  
+a() // bind ---> store it in a variable and invoke it later
 
 
 
